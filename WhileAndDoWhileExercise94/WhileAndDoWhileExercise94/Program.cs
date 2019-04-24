@@ -50,14 +50,13 @@ namespace WhileAndDoWhileExercise94
                 }
             
             }
-            //Console.ReadLine();
 
             //TRIVIA CONSOLE APP INTRODUCTION
             Console.WriteLine("Now that you're warmed up. Let's get started with a trivia question.\n");
             Console.WriteLine("   What is the heaviest naturally occuring element found on Earth? :");
 
             //INITIATE FIRST ANSWER FROM USER
-            string answer = Console.ReadLine();
+            string answer = Console.ReadLine().ToLower();
 
             //WHILE LOOP BOOLEAN
             bool isCorrect = answer == "uranium";
@@ -70,7 +69,7 @@ namespace WhileAndDoWhileExercise94
                 {
                     Console.WriteLine("   Sorry, " + answer + " is incorrect.");
                     Console.WriteLine("Guess again.");
-                    answer = Console.ReadLine();
+                    answer = Console.ReadLine().ToLower();
                 }
                 //IF THE ANSWER IS CORRECT, INFORM THE USER AND END LOOP BY CHANGING BOOLEAN TO TRUE
                 else
