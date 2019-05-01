@@ -22,8 +22,8 @@ namespace WhileAndDoWhileExercise94
                 //READ NUMBER FROM CONSOLE
                 n = Convert.ToInt32(Console.ReadLine());
 
-                //m IS USED TO CHECK IF n IS DIVISIBLE. DON'T NEED TO CHECK FOR i > n/2 BECAUSE THOSE ARE EITHER PRIME OR FACTORS OF NUMBERS <= n/2.
-                //FOR EFFICIENCY, THE CONDITION DOES NOT NEED TO BE CHECKED TWICE.
+                //m IS USED TO CHECK IF n IS DIVISIBLE. DON'T NEED TO CHECK FOR i > n/2 BECAUSE ANY NUMBER GREATER THAN n/2 TIMES ANY NUMBER >1 WOULD EXCEED n. 
+                //THIS IS FOR EFFICIENCY.
                 m = n / 2;
 
                 //START THE LOOP AT i = 2, for all i less than m
