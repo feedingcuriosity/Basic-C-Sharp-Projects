@@ -9,7 +9,7 @@ namespace ClassAndMethodsExercise111
         {
             //2
             // ask the user what number thye want to do the math operations on
-            Console.WriteLine("please enter a number you would like to do math operations on?");
+            Console.WriteLine("please enter a number you would like to do math operations on:");
             // get users number
             int userInput = Convert.ToInt32(Console.ReadLine());
             //Instantiate object Class1 and assign to variable "m"
@@ -28,7 +28,7 @@ namespace ClassAndMethodsExercise111
                 + divideResult);
             Console.ReadLine();
             //method 3 - Subtract
-            Console.WriteLine("First, we will subtract 1 from your number:");
+            Console.WriteLine("Now, we will subtract 1 from your number:");
             int subtractResult = m.Subtract(userInput);
             Console.WriteLine("Your number minus 1 is "
                 + subtractResult);
