@@ -51,5 +51,28 @@ namespace TwentyOneGame
         //public property of data type list 
         //list of cards
         public List<Card> Cards { get; set; }
+        
+        //Class Method - the shuffle method is a behavior of the deck class
+        //default times value of 1, makes this an optional parameter
+        public void Shuffle(int times = 1)
+        {
+            for (int i = 0; i < times; i++)
+            {
+                //empty temporty list of cards
+                List<Card> TempList = new List<Card>();
+                Random random = new Random();
+
+                while (Cards.Count > 0)
+                {
+                    int randomIndex = random.Next(0, Cards.Count);
+                    TempList.Add(Cards[randomIndex]);
+                    Cards.RemoveAt(randomIndex);
+                }
+                Cards = TempList;
+            }
+
+        }
     }
+ 
+    
 }
