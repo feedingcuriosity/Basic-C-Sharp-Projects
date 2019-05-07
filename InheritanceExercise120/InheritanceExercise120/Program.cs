@@ -8,7 +8,6 @@ namespace InheritanceExercise120
         {
             //4
             //instantiate and initialize parameters of an Employee object
-
             Employee employee = new Employee();
             employee.FirstName = "Sample";
             employee.LastName = "Student";

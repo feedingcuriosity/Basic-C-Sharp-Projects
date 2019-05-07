@@ -13,9 +13,16 @@ namespace TwentyOneGame
     //for this more specific class
     public class TwentyOneGame : Game
     {
-        public void Play()
+        //This play method must be here or the compiler would throw an error message
+        public override void Play()
         {
             throw new NotImplementedException();
+        }
+        public override void ListPlayers()
+        {
+            Console.WriteLine("21 Players");
+            //automatically filled in
+            base.ListPlayers();
         }
     }
 }

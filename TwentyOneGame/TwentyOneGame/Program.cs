@@ -10,27 +10,34 @@ namespace TwentyOneGame
     {
         static void Main(string[] args)
         {
+            TwentyOneGame game = new TwentyOneGame();
+            game.Players = new List<string>() { "Jesse", "Bill", "Bob" };
+            game.ListPlayers();
+            Console.ReadLine();
             ////instantiate game object
             //Game game = new Game();
             //game.Dealer = "Kasi";
             //game.Name = "TwentyOne";
 
-            TwentyOneGame game = new TwentyOneGame();
-            game.Players = new List<string>() { "Jesse", "Bill", "Joe" };
-            game.ListPlayers();
-            game.Play();
-            Console.ReadLine();
-            
-            //instantiated an object from the class Deck and assigned it to variable deck
-            Deck deck = new Deck();
-            deck.Shuffle();
+            //TwentyOneGame game = new TwentyOneGame();
+            //game.Players = new List<string>() { "Jesse", "Bill", "Joe" };
+            //game.ListPlayers();
+            //game.Play();
+            //Console.ReadLine();
 
-            foreach (Card card in deck.Cards)
-            {
-                Console.WriteLine(card.Face + " of " + card.Suit);
-            }
-            Console.WriteLine(deck.Cards.Count);
-            Console.ReadLine();
+            //THIS IS POLYMORPHISM
+            //Game game = new TwentyOneGame();
+
+            //instantiated an object from the class Deck and assigned it to variable deck
+            //Deck deck = new Deck();
+            //deck.Shuffle();
+
+            //foreach (Card card in deck.Cards)
+            //{
+            //    Console.WriteLine(card.Face + " of " + card.Suit);
+            //}
+            //Console.WriteLine(deck.Cards.Count);
+            //Console.ReadLine();
             
         }
 
