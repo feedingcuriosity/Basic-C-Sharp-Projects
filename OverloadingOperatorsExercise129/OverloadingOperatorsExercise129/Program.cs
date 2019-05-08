@@ -1,4 +1,8 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace OverloadingOperatorsExercise129
 {
@@ -7,19 +11,19 @@ namespace OverloadingOperatorsExercise129
         static void Main(string[] args)
         {
             //Create two employee objects for comparison
-            Employee employee1 = new Employee();
-            employee1.firstName = "Sample";
-            employee1.lastName = "Student";
-            employee1.employeeId = 1;
+            Employee employee = new Employee("Sample", "Student");
+            Console.WriteLine("employee: \nFirst Name = {0} Last Name = {1}", employee.firstName, employee.lastName);
 
-            Employee employee2 = new Employee();
-            employee2.firstName = "Second";
-            employee2.lastName = "Student";
-            employee2.employeeId = 1;
+            Employee employee1 = employee;
+            employee1.firstName = "New";
+            employee1.lastName = "Student";
+            Console.WriteLine("employee1: \nFirst Name = {0} Last Name = {1}\n", employee1.firstName, employee1.lastName);
 
             //Use overloaded operator
-            bool checkEqual = employee1 == employee2;
-
+            Console.WriteLine("Are the two employees equal?");
+            bool checkEqual = employee == employee1;
+            Console.WriteLine("Are the two employees not equal?");
+            bool checkNotEqual = employee != employee1;
         }
 
     }
