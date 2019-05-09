@@ -10,19 +10,60 @@ namespace TwentyOneGame
     {
         static void Main(string[] args)
         {
-            //struct vs. class
-            Card card1 = new Card();
-            Card card2 = card1;
-            card1.Face = Face.Eight;
-            card2.Face = Face.King;
+            Deck deck = new Deck();
 
-            //Card as a struct would output card1.Face = Eight
-            //because it is a unique copy from card 2
-            //when card2.face was redefined, card1 was not impacted
-            //Card as a class would output card1.Face = King 
-            //because it is just a reference not a copy
-            //when card2.face was redefined, so was card1
-            Console.WriteLine(card1.Face);
+            ////Without Lambda expresion
+            //int counter = 0;
+            //foreach (Card card in deck.Cards)
+            //{
+            //    if (card.Face == Face.Ace)
+            //    {
+            //        counter++;
+            //    }
+            //}
+            //Console.WriteLine(counter);
+            //Console.ReadLine();
+
+            ////With Lambda expression
+            ////counting all the elements in the list (represented by x)
+            ////where x.Face == Face.Ace
+            //int count = deck.Cards.Count(x => x.Face == Face.Ace);
+            ////^<data type> <variable name> = <object><List><Built in Metho>
+            ////=> map this expression to each item
+            //Console.WriteLine(count);
+            //Console.ReadLine();
+
+            ////Another Lambda Example
+            //List<Card> newList = deck.Cards.Where(x => x.Face == Face.King).ToList();
+            //foreach (Card card in newList)
+            //{
+            //    Console.WriteLine(card.Face);
+            //}
+            //Console.ReadLine();
+
+            ////Another Lambda Example
+            //List<int> numberList = new List<int>() { 1, 2, 3, 535, 324, 21 };
+
+            //int sum = numberList.Sum(x => +5);
+            //int max = numberList.Max();
+            //int min = numberList.Min();
+
+            //Console.WriteLine("{0} {1} {2}", sum, max, min);
+            //Console.ReadLine();
+
+            ////struct vs. class
+            //Card card1 = new Card();
+            //Card card2 = card1;
+            //card1.Face = Face.Eight;
+            //card2.Face = Face.King;
+
+            ////Card as a struct would output card1.Face = Eight
+            ////because it is a unique copy from card 2
+            ////when card2.face was redefined, card1 was not impacted
+            ////Card as a class would output card1.Face = King 
+            ////because it is just a reference not a copy
+            ////when card2.face was redefined, so was card1
+            //Console.WriteLine(card1.Face);
 
             ////enum example
             //Card card = new Card();
@@ -57,7 +98,7 @@ namespace TwentyOneGame
             //game = game + player; //or += player
             //game -= player;
 
-            
+
             ////instantiated an object from the class Deck and assigned it to variable deck
             //Deck deck = new Deck();
             //deck.Shuffle(3);
@@ -71,7 +112,7 @@ namespace TwentyOneGame
 
         }
 
-        
+
 
         ////When someone wants to shuffle more than once
         //public static Deck Shuffle(Deck deck, int times)
