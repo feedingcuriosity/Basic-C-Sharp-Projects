@@ -10,6 +10,20 @@ namespace TwentyOneGame
     {
         static void Main(string[] args)
         {
+            //struct vs. class
+            Card card1 = new Card();
+            Card card2 = card1;
+            card1.Face = Face.Eight;
+            card2.Face = Face.King;
+
+            //Card as a struct would output card1.Face = Eight
+            //because it is a unique copy from card 2
+            //when card2.face was redefined, card1 was not impacted
+            //Card as a class would output card1.Face = King 
+            //because it is just a reference not a copy
+            //when card2.face was redefined, so was card1
+            Console.WriteLine(card1.Face);
+
             ////enum example
             //Card card = new Card();
             //card.Suit = Suit.Clubs;
@@ -43,17 +57,17 @@ namespace TwentyOneGame
             //game = game + player; //or += player
             //game -= player;
 
+            
+            ////instantiated an object from the class Deck and assigned it to variable deck
+            //Deck deck = new Deck();
+            //deck.Shuffle(3);
 
-            //instantiated an object from the class Deck and assigned it to variable deck
-            Deck deck = new Deck();
-            deck.Shuffle(3);
-
-            foreach (Card card in deck.Cards)
-            {
-                Console.WriteLine(card.Face + " of " + card.Suit);
-            }
-            Console.WriteLine(deck.Cards.Count);
-            Console.ReadLine();
+            //foreach (Card card in deck.Cards)
+            //{
+            //    Console.WriteLine(card.Face + " of " + card.Suit);
+            //}
+            //Console.WriteLine(deck.Cards.Count);
+            //Console.ReadLine();
 
         }
 

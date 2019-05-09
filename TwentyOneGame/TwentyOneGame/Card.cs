@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TwentyOneGame
 {
     //class = model or template
-    public class Card
+    public struct Card
     {
 
         //give card class a property called "suit"
