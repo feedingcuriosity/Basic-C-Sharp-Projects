@@ -16,27 +16,45 @@ namespace TwentyOneGame
         {
             //instantiate the object in the constructor as an empty list to assign values later
             Cards = new List<Card>();
-            //first, create a list of all possible suits
-            List<string> Suits = new List<string>() { "Clubs", "Hearts", "Diamonds", "Spades" };
-            List<string> Faces = new List<string>()
-            {
-                "Two", "Three", "Four", "Five", "Six", "Seven",
-                "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"
-            };
 
-            foreach (string face in Faces)
+            //Using our new suit and face enums:
+            for (int i=0; i<13; i++)
             {
-                foreach (string suit in Suits)
+                for (int j=0; j<4; j++)
                 {
-                    //note that card only exists in this loop and that's why
-                    //we can create it over and over again
                     Card card = new Card();
-                    card.Suit = suit;
-                    card.Face = face;
+                    //put data type you're caseing to inside (). Casting to Face j
+                    card.Face = (Face)i;
+                    card.Suit = (Suit)j;
+                    //Add this card to the card list
                     Cards.Add(card);
                 }
             }
-            
+
+
+            ////deleted this once we created the enum
+            //first, create a list of all possible suits
+            //List<string> Suits = new List<string>() { "Clubs", "Hearts", "Diamonds", "Spades" };
+            //List<string> Faces = new List<string>()
+            //{
+            //    "Two", "Three", "Four", "Five", "Six", "Seven",
+            //    "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"
+            //};
+
+            //foreach (string face in Faces)
+            //{
+            //    foreach (string suit in Suits)
+            //    {
+            //        //note that card only exists in this loop and that's why
+            //        //we can create it over and over again
+            //        Card card = new Card();
+            //        card.Suit = suit;
+            //        card.Face = face;
+            //        Cards.Add(card);
+            //    }
+            //}
+            ////
+
             //Here's the long way, you would do this for everycard in the deck
             //Cards = new List<Card>();
             //Card cardOne = new Card();
@@ -46,7 +64,7 @@ namespace TwentyOneGame
 
 
         }
-        
+
         //deck is a collection of the cards class
         //public property of data type list 
         //list of cards

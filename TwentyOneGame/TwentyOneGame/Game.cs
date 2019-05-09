@@ -10,7 +10,7 @@ namespace TwentyOneGame
     public abstract class Game
     {
         //attributes of most games (generic as possible for changing requirements)
-        public List<string> Players { get; set; }
+        public List<Player> Players { get; set; }
         public string Name { get; set; }
         public string Dealer { get; set; }
 
@@ -24,7 +24,7 @@ namespace TwentyOneGame
         //use virtual keyword to modify method declared in the base class (game in this case) and allow it to be overridden in the derived class 
         public virtual void ListPlayers()
         {
-            foreach (string player in Players)
+            foreach (Player player in Players)
             {
                 Console.WriteLine(player);
             }

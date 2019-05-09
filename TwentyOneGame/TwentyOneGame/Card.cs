@@ -9,10 +9,36 @@ namespace TwentyOneGame
     //class = model or template
     public class Card
     {
+
         //give card class a property called "suit"
         //get and set are the only things you can do with the property suit with data type string
-        public string Suit { get; set; }
-        public string Face { get; set; }
+        public Suit Suit { get; set; }
+        public Face Face { get; set; }
 
-    }  
+        
+    }
+    //defining an enum is similiar to defining a class and good practice is to have it as a separate file
+    public enum Suit
+    {
+        Clubs, 
+        Diamonds,
+        Hearts,
+        Spades
+    }
+    public enum Face
+    {
+        Two,
+        Three,
+        Four,
+        Five,
+        Six,
+        Seven,
+        Eight,
+        Nine,
+        Ten,
+        Jack,
+        Queen,
+        King,
+        Ace
+    }
 }

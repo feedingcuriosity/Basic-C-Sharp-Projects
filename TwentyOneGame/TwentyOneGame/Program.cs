@@ -10,10 +10,17 @@ namespace TwentyOneGame
     {
         static void Main(string[] args)
         {
-            TwentyOneGame game = new TwentyOneGame();
-            game.Players = new List<string>() { "Jesse", "Bill", "Bob" };
-            game.ListPlayers();
-            Console.ReadLine();
+            ////enum example
+            //Card card = new Card();
+            //card.Suit = Suit.Clubs;
+            //int underlyingValue = (int)Suit.Diamonds;
+            //Console.WriteLine(underlyingValue);
+            ////
+
+            //TwentyOneGame game = new TwentyOneGame();
+            //game.Players = new List<string>() { "Jesse", "Bill", "Bob" };
+            //game.ListPlayers();
+            //Console.ReadLine();
             ////instantiate game object
             //Game game = new Game();
             //game.Dealer = "Kasi";
@@ -28,17 +35,26 @@ namespace TwentyOneGame
             //THIS IS POLYMORPHISM
             //Game game = new TwentyOneGame();
 
-            //instantiated an object from the class Deck and assigned it to variable deck
-            //Deck deck = new Deck();
-            //deck.Shuffle();
+            //Game game = new TwentyOneGame();
+            //game.Players = new List<Player>();
+            //Player player = new Player();
+            //player.Name = "Jesse";
+            ////using overload operator
+            //game = game + player; //or += player
+            //game -= player;
 
-            //foreach (Card card in deck.Cards)
-            //{
-            //    Console.WriteLine(card.Face + " of " + card.Suit);
-            //}
-            //Console.WriteLine(deck.Cards.Count);
-            //Console.ReadLine();
-            
+
+            //instantiated an object from the class Deck and assigned it to variable deck
+            Deck deck = new Deck();
+            deck.Shuffle(3);
+
+            foreach (Card card in deck.Cards)
+            {
+                Console.WriteLine(card.Face + " of " + card.Suit);
+            }
+            Console.WriteLine(deck.Cards.Count);
+            Console.ReadLine();
+
         }
 
         

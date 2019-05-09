@@ -8,7 +8,7 @@ namespace TwentyOneGame
 {
     public class Dealer
     {
-        //Dealer properties
+        //Dealer propertiess
         //prop tab tab 
         public string Name { get; set; }
         //Deck is a class property (composition - do this when in doubt), not inherited, because a dealer HAS-A deck. It's not that the dealer IS-A deck.

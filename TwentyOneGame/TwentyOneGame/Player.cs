@@ -14,5 +14,21 @@ namespace TwentyOneGame
         public string Name { get; set; }
         public bool isActivelyPlaying { get; set; }
 
+        //overloading an operator. syntax:
+            //access specifier  className  operator Operator_symbol (parameters)
+                //{
+                    // Code
+                //}
+        public static Game operator+ (Game game, Player player)
+        {
+            //note, game is the objec t
+            game.Players.Add(player);
+            return game;
+        }
+        public static Game operator- (Game game, Player player)
+        {
+            game.Players.Remove(player);
+            return game;
+        }
     }
 }
