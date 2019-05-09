@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace OverloadingOperatorsExercise129
 {
     //change to struct to hold a copy of the entire object.
-    public struct Employee
+    public class Employee
     {
         //create properties
         public string firstName;
@@ -18,43 +18,36 @@ namespace OverloadingOperatorsExercise129
             firstName = firstname;
             lastName = lastname;
         }
-
         //1
         //Overload the "==" operator so it checks if two Employee objects are equal by comparing their Id property.
         //syntax --> access specifier  className  operator Operator_symbol (parameters)
-        public static bool operator== (Employee employee1, Employee employee2)
+        public static bool operator== (Employee employee, Employee employee1)
         {
-         
-            bool check = employee2.Equals(employee1);
-            if (check)
+
+            if (employee.firstName == employee1.firstName && employee.lastName == employee1.lastName)
             {
-                Console.WriteLine(check + "; These employees are the same.");
-                Console.ReadLine();
+                Console.WriteLine("True; These employees are equal");
                 return true;
             }
             else
-            {
-                Console.WriteLine(check + "; These employees are not the same.");
-                Console.ReadLine();
+                Console.WriteLine("False; These employees are not equal");
                 return false;
-            }
         }
 
         //== must be accomanied by !=
-        public static bool operator!= (Employee employee1, Employee employee2)
+        public static bool operator!= (Employee employee, Employee employee1)
         {
-            bool check = employee2.Equals(employee1);
-            if (check)
+            if (employee.firstName != employee1.firstName | employee.lastName != employee1.lastName)
             {
-                Console.WriteLine((!(check)) + "; These employees are the same.");
+                Console.WriteLine("True; These employees are not equal.");
                 Console.ReadLine();
-                return false;
+                return true;               
             }
             else
             {
-                Console.WriteLine((!(check)) + "; These employees are not the same.");
+                Console.WriteLine("False; these employees are equal.");
                 Console.ReadLine();
-                return true;
+                return false;
             }
         }
 

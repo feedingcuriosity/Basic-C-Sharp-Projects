@@ -14,9 +14,7 @@ namespace OverloadingOperatorsExercise129
             Employee employee = new Employee("Sample", "Student");
             Console.WriteLine("employee: \nFirst Name = {0} Last Name = {1}", employee.firstName, employee.lastName);
 
-            Employee employee1 = employee;
-            employee1.firstName = "New";
-            employee1.lastName = "Student";
+            Employee employee1 = new Employee ("new", "Student");
             Console.WriteLine("employee1: \nFirst Name = {0} Last Name = {1}\n", employee1.firstName, employee1.lastName);
 
             //Use overloaded operator
