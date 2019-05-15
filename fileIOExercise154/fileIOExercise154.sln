@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaExpressionExercise140", "LambdaExpressionExercise140\LambdaExpressionExercise140.csproj", "{3134C830-1DD4-4B50-8AAF-AF9A3748737A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fileIOExercise154", "fileIOExercise154\fileIOExercise154.csproj", "{1BF3A95D-4E65-4933-8A4B-F76D42A62BF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3134C830-1DD4-4B50-8AAF-AF9A3748737A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3134C830-1DD4-4B50-8AAF-AF9A3748737A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3134C830-1DD4-4B50-8AAF-AF9A3748737A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3134C830-1DD4-4B50-8AAF-AF9A3748737A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BF3A95D-4E65-4933-8A4B-F76D42A62BF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BF3A95D-4E65-4933-8A4B-F76D42A62BF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BF3A95D-4E65-4933-8A4B-F76D42A62BF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BF3A95D-4E65-4933-8A4B-F76D42A62BF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7A6500C3-2029-4CE8-9BA7-34C86B65A120}
+		SolutionGuid = {D43A12C2-66F8-48A6-9D78-07B41DFB4C78}
 	EndGlobalSection
 EndGlobal
